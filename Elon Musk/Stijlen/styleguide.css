@@ -1,0 +1,159 @@
+body{
+    background-image: url("../Afbeeldingen/backgroundimage.jpg");
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: cover;
+    margin: 10px 20px 20px 20px;
+}
+
+.header{
+    grid-area: header;
+}
+
+.logo{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.title{
+    font-family: verdana;
+    font-style: normal;
+    font-size: 105%;
+}
+
+.text{
+    font-family: calibri;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.block1{
+    grid-area: block1;
+    background-color: burlywood;
+}
+
+.block2{
+    grid-area: block2;
+    background-color: burlywood;
+}
+
+.block3{
+    grid-area: block3;
+    background-color: burlywood;
+}
+
+.block1, .block2, .block3{
+    background-color: #050505;
+    color: #ffffff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 2% 8% 10% 8%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 25px #000003;
+    
+}
+
+
+
+
+
+
+
+@media only screen and (min-width:320px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "block1"
+        "block2"
+        "block3"
+        ;
+    }
+
+    .block1, .block2, .block3 {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media only screen and (min-width:600px) {
+    body {
+        margin: 50px 70px 50px 70px;
+    }
+    
+    .block1, .block2, .block3 {
+        margin-bottom: 50px;
+    }
+    
+    .title {
+        font-size: 150%;
+    }
+
+    .text {
+        font-size: 120%;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    body {
+        margin: 50px 150px 50px 150px;
+    }
+
+    .title {
+        font-size: 180%;
+    }
+
+    .text {
+        font-size: 150%;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    body {
+        margin: 50px 200px 50px 200px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.6fr 1fr;
+        grid-template-areas: 
+        "header header header header header header header header"
+        "block1 block1 block1 block1 block2 block2 block2 block2"
+        "block3 block3 block3 block3 block3 block3 block3 block3"
+        ;
+        grid-gap: 30px;
+    }
+
+    .logo {
+        width: 30%;
+        margin-top: 50px;
+        float: left;
+        margin-left: 30px;
+    }
+
+    .block3{
+        width: 82%;
+        height: 70%;
+    }
+
+    .block1, .block2{
+        margin-top: 100px;
+        margin-bottom: 30px;
+        
+    }
+
+    .title {
+        font-size: 200%;
+    }
+
+    .text {
+        font-size: 180%;
+    }
+}
